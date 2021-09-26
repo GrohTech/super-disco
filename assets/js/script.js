@@ -32,6 +32,5 @@ savBtn9.click(function() {
     
     var calendarEvent9 = $("#calendar-event-9").html();
 
-    localStorage.setItem('9:00 AM', calendarEvent9);
-});
-// moment(calendarHour.format.toString(), "LT");
+    localStorage.setItem('event9', calendarEvent9);
+}); 

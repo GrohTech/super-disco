@@ -57,6 +57,10 @@ textarea{
   color: white;
 }
 
+button {
+  outline: 0;
+  border: 0;
+}
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -64,9 +68,15 @@ textarea{
   background-color: #06AED5;
   color: white;
   font-size: 25px;
+  outline: 0;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+button:active, button:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
 }
