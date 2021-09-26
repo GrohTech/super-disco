@@ -1,6 +1,15 @@
 
 var savBtn9 = $("#saveBtn-9");
 var event9 = $("#event-9");
+var event10 = $("#event-10");
+var event11 = $("#event-11");
+var event12 = $("#event-12");
+var event13 = $("#event-13");
+var event14 = $("#event-14");
+var event15 = $("#event-15");
+var event16 = $("#event-16");
+var event17 = $("#event-17");
+
 
 // Display current date
 var CurrentDate = moment().format('MMMM Do, YYYY');
@@ -25,17 +34,42 @@ $(".calendar-hour").each(function(){
         $("#calendar-event-"+timeBlock).removeClass("present");
         $("#calendar-event-"+timeBlock).removeClass("past"); 
     }
+    console.log(timeBlock);
 });
 
 // Get events from localStorage
 function getEvents() { 
 
 var getEvent9 = localStorage.getItem('event9');
+event9.text(getEvent9);
 
-event9.textcontent = getEvent9;
+var getEvent10 = localStorage.getItem('event10');
+event10.text(getEvent10);
+
+var getEvent11 = localStorage.getItem('event11');
+event11.text(getEvent11);
+
+var getEvent12 = localStorage.getItem('event12');
+event12.text(getEvent12);
+
+var getEvent13 = localStorage.getItem('event13');
+event13.text(getEvent13);
+
+var getEvent14 = localStorage.getItem('event14');
+event14.text(getEvent14);
+
+var getEvent15 = localStorage.getItem('event15');
+event15.text(getEvent15);
+
+var getEvent16 = localStorage.getItem('event16');
+event16.text(getEvent16);
+
+var getEvent17 = localStorage.getItem('event17');
+event17.text(getEvent17);
 
 };
 getEvents();
+
 // console.log(getEvents());
 // Save event to localStorage
 $(".saveBtn").each(function(){
