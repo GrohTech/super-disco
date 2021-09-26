@@ -23,18 +23,17 @@ $(".calendar-hour").each(function(){
     var timeBlock = parseInt($(this).attr("id").split("-")[1]);
 
     if(timeBlock < time){
-        $("#calendar-event-"+timeBlock).addClass("past");
+        $("#event-"+timeBlock).addClass("past");
     }
     else if(timeBlock === time){
-        $("#calendar-event-"+timeBlock).addClass("present");
-        $("#calendar-event-"+timeBlock).removeClass("past");
+        $("#event-"+timeBlock).addClass("present");
+        $("#event-"+timeBlock).removeClass("past");
     }
     else {
-        $("#calendar-event-"+timeBlock).addClass("future");
-        $("#calendar-event-"+timeBlock).removeClass("present");
-        $("#calendar-event-"+timeBlock).removeClass("past"); 
+        $("#event-"+timeBlock).addClass("future");
+        $("#event-"+timeBlock).removeClass("present");
+        $("#event-"+timeBlock).removeClass("past"); 
     }
-    console.log(timeBlock);
 });
 
 // Get events from localStorage
@@ -70,7 +69,7 @@ event17.text(getEvent17);
 };
 getEvents();
 
-// console.log(getEvents());
+
 // Save event to localStorage
 $(".saveBtn").each(function(){
     $(this).on("click", function(){
@@ -82,26 +81,3 @@ $(".saveBtn").each(function(){
     getEvents();
     });
 });
-
-
-
-
-// savBtn9.click(function() {
-    
-//     var calendarEvent9 = $("#calendar-event-9").val();
-
-//     localStorage.setItem('event9', calendarEvent9);
-//     console.log(calendarEvent9);
-// }); 
-
-// // Save event to localStorage
-// $(".saveBtn").each(function(){
-//     $(this).on("click", function(){
-//     var calendarEvent = parseInt($(this).attr("id").split("-")[1]);    
-    
-//     var event9 = $("#event-9").val();
-
-//     localStorage.setItem('event9', event9);
-//     // console.log(event9);
-//     });
-// });
