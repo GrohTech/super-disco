@@ -20,7 +20,7 @@
 3. Add additional events in additional time blocks, if desired
 4. Reload page, and events will remain visible
 
-**View the homepage, here:** [Super-Disco](https://grohtech.github.io/horiseon/ "Super-Disco App")
+**View the homepage, here:** [Super-Disco](https://grohtech.github.io/super-disco/ "Super-Disco App")
 
 **View website screenshots, here:**  
 ![Super Disco - 1](./assets/images/super-disco-1.png "Super Disco - 1")  
