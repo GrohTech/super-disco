@@ -1,6 +1,6 @@
 
 var savBtn9 = $("#saveBtn-9");
-
+var event9 = $("#event-9");
 
 // Display current date
 var CurrentDate = moment().format('MMMM Do, YYYY');
@@ -27,14 +27,25 @@ $(".calendar-hour").each(function(){
     }
 });
 
+// Get events from localStorage
+function getEvents() { 
 
+var getEvent9 = localStorage.getItem('event9');
+
+event9.textcontent = getEvent9;
+
+};
+getEvents();
+// console.log(getEvents());
 // Save event to localStorage
 $(".saveBtn").each(function(){
     $(this).on("click", function(){
     var calendarEvent = parseInt($(this).attr("id").split("-")[1]);    
     var storeEvent = $("#event-"+calendarEvent).val();
 
-    localStorage.setItem('event', storeEvent);
+    localStorage.setItem('event'+calendarEvent, storeEvent);
+    // Get saved events
+    getEvents();
     });
 });
 
