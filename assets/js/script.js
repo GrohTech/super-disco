@@ -1,28 +1,37 @@
+
+
 // Display current date
 var CurrentDate = moment().format('MMMM Do, YYYY');
 $("#currentDay").append(CurrentDate);
 
-// Set time block format
-var calendarHour = $(".calendar-hour").val;
-var format = 'hh:mm A';
-// moment(calendarHour.format.toString(), "LT");
-var convertedTime = moment(calendarHour, format);
-
-console.log(convertedTime.format('MMMM Do YYYY, h:mm:ss a'))
-console.log(time.format('MMMM Do YYYY, h:mm:ss a'))
 
 // Link time blocks to colors
-var rowColor = $(".row");
-var time = moment();
+var time = moment().hours();
 
-if(convertedTime.isBefore(time)){
-    rowColor.style.backgroundColor = 'gray';
-}
-if(convertedTime.isSame(time) || convertedTime.isSame(time.add(59, 'minutes'))){
-    rowColor.style.backgroundColor = 'red';
+$(".calendar-hour").each(function(){
+    var timeBlock = parseInt($(this).attr("id").split("-")[1]);
 
-}
-if(convertedTime.isAfter(time.add(59, 'minutes'))){
-    rowColor.style.backgroundColor = 'green';
-}
+    if(timeBlock < time){
+        $("#calendar-event-"+timeBlock).addClass("past");
+    }
+    else if(timeBlock === time){
+        $("#calendar-event-"+timeBlock).addClass("present");
+        $("#calendar-event-"+timeBlock).removeClass("past");
+    }
+    else {
+        $("#calendar-event-"+timeBlock).addClass("future");
+        $("#calendar-event-"+timeBlock).removeClass("present");
+        $("#calendar-event-"+timeBlock).removeClass("past"); 
+    }
+});
 
+
+// Save event to localStorage
+var savBtn9 = $("#saveBtn-9");
+savBtn9.click(function() {
+    
+    var calendarEvent9 = $("#calendar-event-9").html();
+
+    localStorage.setItem('9:00 AM', calendarEvent9);
+});
+// moment(calendarHour.format.toString(), "LT");
