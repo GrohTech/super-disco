@@ -1,137 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <div class="row border">
-        <div class="col-2">
-          <p class="calendar-hour">9:00 AM</p>
-        </div>
-        <div class="col-8">
-          <p>Task</p>
-        </div>
-        <div class="col-2">
-          <button class="saveBtn" type=button>Save</button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-2 calendar-hour">
+        9:00 AM
       </div>
-      <div class="row border">
-        <div class="col-2">
-          <p class="calendar-hour">10:00 AM</p>
-        </div>
-        <div class="col-8">
-          <p>Task</p>
-        </div>
-        <div class="col-2">
-          <button class="saveBtn" type=button>Save</button>
-        </div>
-      </div>
-      <div class="row border">
-        <div class="col-2">
-          <p class="calendar-hour">11:00 AM</p>
-        </div>
-        <div class="col-8">
-          <p>Task</p>
-        </div>
-        <div class="col-2">
-          <button class="saveBtn" type=button>Save</button>
-        </div>
-      </div>
-      <div class="row border">
-        <div class="col-2">
-          <p class="calendar-hour">12:00 PM</p>
-        </div>
-        <div class="col-8">
-          <p>Task</p>
-        </div>
-        <div class="col-2">
-          <button class="saveBtn" type=button>Save</button>
-        </div>
-      </div>
-      <div class="row border">
-        <div class="col-2">
-          <p class="calendar-hour">1:00 PM</p>
-        </div>
-        <div class="col-8">
-          <p>Task</p>
-        </div>
-        <div class="col-2">
-          <button class="saveBtn" type=button>Save</button>
-        </div>
-      </div>      
-      <div class="row border">
-        <div class="col-2">
-          <p class="calendar-hour">2:00 PM</p>
-        </div>
-        <div class="col-8">
-          <p>Task</p>
-        </div>
-        <div class="col-2">
-          <button class="saveBtn" type=button>Save</button>
-        </div>
-      </div>      
-      <div class="row border">
-        <div class="col-2">
-          <p class="calendar-hour">3:00 PM</p>
-        </div>
-        <div class="col-8">
-          <p>Task</p>
-        </div>
-        <div class="col-2">
-          <button class="saveBtn" type=button>Save</button>
-        </div>
-      </div>      
-      <div class="row border">
-        <div class="col-2">
-          <p class="calendar-hour">4:00 PM</p>
-        </div>
-        <div class="col-8">
-          <p>Task</p>
-        </div>
-        <div class="col-2">
-          <button class="saveBtn" type=button>Save</button>
-        </div>
-      </div>      
-      <div class="row border">
-        <div class="col-2">
-          <p class="calendar-hour">5:00 PM</p>
-        </div>
-        <div class="col-8">
-          <p>Task</p>
-        </div>
-        <div class="col-2">
-          <button class="saveBtn" type=button>Save</button>
-        </div>
+      <textarea class="col-8 description" id="calendar-event-9" name="calendar-event">Add an event</textarea>
+      <div class="col-2 saveBtn" type="button id=saveBtn">
+        Save
       </div>
     </div>
+    <div class="row">
+      <div class="col-2 calendar-hour">
+        10:00 AM
+      </div>
+      <textarea class="col-8 description" id="calendar-event-10" name="calendar-event">Add an event</textarea>
+      <div class="col-2 saveBtn" type="button id=saveBtn">
+        Save
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 calendar-hour">
+        11:00 AM
+      </div>
+      <textarea class="col-8 description" id="calendar-event-11" name="calendar-event">Add an event</textarea>
+      <div class="col-2 saveBtn" type="button id=saveBtn">
+        Save
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 calendar-hour">
+        12:00 PM
+      </div>
+      <textarea class="col-8 description" id="calendar-event-12" name="calendar-event">Add an event</textarea>
+      <div class="col-2 saveBtn" type="button id=saveBtn">
+        Save
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 calendar-hour">
+        1:00 PM
+      </div>
+      <textarea class="col-8 description" id="calendar-event-1" name="calendar-event">Add an event</textarea>
+      <div class="col-2 saveBtn" type="button id=saveBtn">
+        Save
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 calendar-hour">
+        2:00 PM
+      </div>
+      <textarea class="col-8 description" id="calendar-event-2" name="calendar-event">Add an event</textarea>
+      <div class="col-2 saveBtn" type="button id=saveBtn">
+        Save
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 calendar-hour">
+        3:00 PM
+      </div>
+      <textarea class="col-8 description" id="calendar-event-3" name="calendar-event">Add an event</textarea>
+      <div class="col-2 saveBtn" type="button id=saveBtn">
+        Save
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 calendar-hour">
+        4:00 PM
+      </div>
+      <textarea class="col-8 description" id="calendar-event-4" name="calendar-event">Add an event</textarea>
+      <div class="col-2 saveBtn" type="button id=saveBtn">
+        Save
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 calendar-hour">
+        5:00 PM
+      </div>
+      <textarea class="col-8 description" id="calendar-event-5" name="calendar-event">Add an event</textarea>
+      <div class="col-2 saveBtn" type="button id=saveBtn">
+        Save
+      </div>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
